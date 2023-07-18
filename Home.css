@@ -1,9 +1,9 @@
  .u-section-1 {
-  min-height: 200px;
+  min-height: 78px;
 }
 
 .u-section-1 .u-sheet-1 {
-  min-height: 871px;
+  min-height: 1372px;
 }
 
 .u-section-1 .u-layout-wrap-1 {
@@ -20,42 +20,34 @@
 }
 
 .u-section-1 .u-text-1 {
-  background-image: none;
-  font-weight: 700;
-  font-size: 3rem;
-  width: 536px;
-  margin: -61px auto 0;
-}
-
-.u-section-1 .u-text-2 {
   font-size: 1.875rem;
-  margin: 35px 0 0 auto;
+  margin: 52px 0 0 auto;
 }
 
 .u-section-1 .u-image-1 {
-  width: 597px;
-  height: 548px;
+  width: 571px;
+  height: 523px;
   box-shadow: -2px 0 0 0 rgba(0,0,0,0);
   text-shadow: 0px 0px 0px rgba(0,0,0,0);
-  margin: -112px auto 0 -130px;
+  margin: -68px auto 0 -134px;
 }
 
 .u-section-1 .u-image-2 {
   width: 814px;
   height: 503px;
-  margin: -503px auto 0 116px;
+  margin: -503px auto 0 136px;
 }
 
 .u-section-1 .u-btn-1 {
   background-image: none;
   font-size: 1.875rem;
-  margin: -69px auto 0 409px;
+  margin: -76px auto 0 409px;
   padding: 0;
 }
 
-.u-section-1 .u-text-3 {
+.u-section-1 .u-text-2 {
   font-size: 1.875rem;
-  margin: -48px auto 0 44px;
+  margin: -48px auto 0 40px;
 }
 
 .u-section-1 .u-btn-2 {
@@ -66,23 +58,45 @@
 .u-section-1 .u-image-3 {
   width: 521px;
   height: 430px;
-  margin: -445px -52px 0 auto;
+  margin: -430px -52px 0 auto;
 }
 
 .u-section-1 .u-btn-3 {
   background-image: none;
   font-size: 1.875rem;
-  margin: -32px 100px 0 auto;
+  margin: -48px 100px 0 auto;
+  padding: 0;
+}
+
+.u-section-1 .u-text-3 {
+  background-image: none;
+  font-weight: 700;
+  font-size: 3rem;
+  width: 536px;
+  margin: -553px auto 0;
+}
+
+.u-section-1 .u-text-4 {
+  font-size: 1.875rem;
+  margin: 517px 0 0 auto;
+}
+
+.u-section-1 .u-image-4 {
+  width: 649px;
+  height: 448px;
+  margin: -90px auto 0 22px;
+}
+
+.u-section-1 .u-btn-4 {
+  background-image: none;
+  font-size: 1.875rem;
+  margin: -8px auto 60px 229px;
   padding: 0;
 }
 
 @media (max-width: 1199px) {
-   .u-section-1 {
-    min-height: 78px;
-  }
-
   .u-section-1 .u-sheet-1 {
-    min-height: 1160px;
+    min-height: 1250px;
   }
 
   .u-section-1 .u-layout-cell-1 {
@@ -95,12 +109,24 @@
     transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
   }
 
+  .u-section-1 .u-image-2 {
+    margin-left: 126px;
+  }
+
   .u-section-1 .u-btn-1 {
     margin-left: 209px;
   }
 
   .u-section-1 .u-btn-3 {
     margin-right: 0;
+  }
+
+  .u-section-1 .u-image-4 {
+    height: 447px;
+  }
+
+  .u-section-1 .u-btn-4 {
+    margin-left: 29px;
   }
 }
 
@@ -110,7 +136,7 @@
   }
 
   .u-section-1 .u-sheet-1 {
-    min-height: 703px;
+    min-height: 777px;
   }
 
   .u-section-1 .u-layout-cell-1 {
@@ -124,17 +150,21 @@
   }
 
   .u-section-1 .u-btn-1 {
-    margin-top: -11px;
+    margin-top: -18px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-btn-4 {
     margin-left: 0;
   }
 }
 
 @media (max-width: 767px) {
-  .u-section-1 .u-text-1 {
-    font-size: 1rem;
+  .u-section-1 .u-sheet-1 {
+    min-height: 702px;
   }
 
-  .u-section-1 .u-text-2 {
+  .u-section-1 .u-text-1 {
     font-size: 1rem;
   }
 
@@ -144,29 +174,47 @@
   }
 
   .u-section-1 .u-btn-1 {
-    margin-top: 100px;
+    margin-top: 93px;
+  }
+
+  .u-section-1 .u-text-2 {
+    font-size: 1rem;
   }
 
   .u-section-1 .u-text-3 {
     font-size: 1rem;
   }
+
+  .u-section-1 .u-text-4 {
+    font-size: 1rem;
+  }
+
+  .u-section-1 .u-image-4 {
+    width: 540px;
+    height: 372px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-btn-4 {
+    margin-top: 67px;
+  }
 }
 
 @media (max-width: 575px) {
-  .u-section-1 .u-text-1 {
-    width: 340px;
+  .u-section-1 .u-sheet-1 {
+    min-height: 564px;
   }
 
   .u-section-1 .u-image-1 {
     width: 340px;
-    height: 312px;
+    height: 311px;
     margin-left: 0;
   }
 
   .u-section-1 .u-image-2 {
     width: 340px;
     height: 210px;
-    margin-top: -267px;
+    margin-top: -291px;
   }
 
   .u-section-1 .u-image-3 {
@@ -176,6 +224,15 @@
   }
 
   .u-section-1 .u-btn-3 {
-    margin-top: 117px;
+    margin-top: 101px;
+  }
+
+  .u-section-1 .u-text-3 {
+    width: 340px;
+  }
+
+  .u-section-1 .u-image-4 {
+    width: 340px;
+    height: 234px;
   }
 }
