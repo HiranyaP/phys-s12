@@ -1,0 +1,150 @@
+ .u-section-1 {
+  background-image: none;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 939px;
+}
+
+.u-section-1 .u-text-1 {
+  background-image: none;
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 21px 384px 0 402px;
+}
+
+.u-section-1 .u-text-2 {
+  background-image: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: -31px 927px 0 -19px;
+}
+
+.u-section-1 .u-text-3 {
+  margin: 43px 57px 0 1px;
+}
+
+.u-section-1 .u-image-1 {
+  width: 445px;
+  height: 593px;
+  margin: -11px auto 0 319px;
+}
+
+.u-section-1 .u-text-4 {
+  margin: 44px 59px 60px 0;
+}
+
+@media (max-width: 1199px) {
+   .u-section-1 {
+    min-height: 7923px;
+  }
+
+  .u-section-1 .u-text-1 {
+    width: 335px;
+    margin-right: 2px;
+    margin-left: 803px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-right: 659px;
+    margin-left: 481px;
+  }
+
+  .u-section-1 .u-text-3 {
+    margin-top: 101px;
+    margin-right: 640px;
+    margin-left: 500px;
+  }
+
+  .u-section-1 .u-image-1 {
+    margin-top: 49px;
+  }
+
+  .u-section-1 .u-text-4 {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 991px) {
+   .u-section-1 {
+    min-height: 7830px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-right: -438px;
+    margin-left: 1243px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-right: 109px;
+    margin-left: 1031px;
+  }
+
+  .u-section-1 .u-text-3 {
+    margin-right: 90px;
+    margin-left: 1050px;
+  }
+
+  .u-section-1 .u-image-1 {
+    margin-left: 275px;
+  }
+}
+
+@media (max-width: 767px) {
+   .u-section-1 {
+    min-height: 7542px;
+  }
+
+  .u-section-1 .u-text-1 {
+    font-size: 1rem;
+    margin-right: -798px;
+    margin-left: 1603px;
+  }
+
+  .u-section-1 .u-text-2 {
+    font-size: 1rem;
+    margin-right: -341px;
+    margin-left: 1481px;
+  }
+
+  .u-section-1 .u-text-3 {
+    margin-right: -360px;
+    margin-left: 1500px;
+  }
+
+  .u-section-1 .u-image-1 {
+    margin-top: 0;
+    margin-left: 95px;
+  }
+}
+
+@media (max-width: 575px) {
+   .u-section-1 {
+    min-height: 5796px;
+  }
+
+  .u-section-1 .u-sheet-1 {
+    min-height: 799px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-right: -1198px;
+    margin-left: 2003px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-right: -841px;
+    margin-left: 1981px;
+  }
+
+  .u-section-1 .u-text-3 {
+    margin-right: -860px;
+    margin-left: 2000px;
+  }
+
+  .u-section-1 .u-image-1 {
+    width: 340px;
+    height: 453px;
+    margin-left: 0;
+  }
+}

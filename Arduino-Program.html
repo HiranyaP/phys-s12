@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>About</title>
+    <title>Arduino Program</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="About.css" media="screen">
+<link rel="stylesheet" href="Arduino-Program.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 5.13.1, nicepage.com">
@@ -20,7 +20,7 @@
 		"name": ""
 }</script>
     <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="About">
+    <meta property="og:title" content="Arduino Program">
     <meta property="og:type" content="website">
   <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-palette-1-dark-2 u-header" id="sec-9da5"><div class="u-clearfix u-sheet u-sheet-1">
@@ -51,14 +51,25 @@
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-        <a class="u-btn u-button-link u-button-style u-none u-text-hover-white u-text-white u-btn-1" data-href="/Press-Fit-Project.html" href="Final-Project.html">Final Project<span style="font-size: 1.125rem;"></span>
+        <a class="u-btn u-button-link u-button-style u-none u-text-hover-white u-text-white u-btn-1" data-href="Press-Fit-Project.html" href="Final-Project.html">Final Project<span style="font-size: 1.125rem;"></span>
         </a>
       </div></header>
-    <section class="u-clearfix u-palette-1-dark-2 u-section-1" id="sec-f1b2">
+    <section class="u-clearfix u-palette-1-dark-2 u-section-1" id="sec-8f83">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-custom-font u-font-pt-sans u-text u-text-1">About Me</p>
-        <img class="u-image u-image-round u-radius-10 u-image-1" src="images/Screenshot2023-07-13at12.23.49PM.png" alt="" data-image-width="1158" data-image-height="1552">
-        <p class="u-align-justify u-custom-font u-font-pt-sans u-text u-text-2">Hello! My name is Hiranya Parekh, I am a sophomore in highschool and I live in Santa Clara, CA. I am an competative swimmer and I enjoy robotics and rocketry. Apart from that I also enjoy physics and CAD. In the future I want to study Applied Engineering Physics and hopefully do some robotics on the side.&nbsp;</p>
+        <p class="u-custom-font u-font-pt-sans u-text u-text-1">Arduino Program</p>
+        <img class="u-image u-image-contain u-image-default u-image-1" src="images/tempImagePngSOd-removebg-preview.png" alt="" data-image-width="443" data-image-height="563">
+        <p class="u-custom-font u-font-pt-sans u-text u-text-2">
+          <span style="font-weight: normal;">Overview:&nbsp;</span>
+        </p>
+        <p class="u-text u-text-3">Now that I had a motor that moved in my kinetic sculpture, I wanted something that would be able to control the speed of the motor. I turned to a simple potentiometer code and circuit and in the end it worked out well.&nbsp;</p>
+        <p class="u-custom-font u-font-pt-sans u-text u-text-4">
+          <span style="font-weight: normal;">Code:</span>
+        </p>
+        <p class="u-text u-text-5"> The setup() method defines pin modes. Pin 3 is set up to control the motor speed as an output pin. Additionally set are the output pins A0 and A4. A0 is tied to the potentiometer's ground (GND) in this configuration, while A4 is attached to the device's 3.3-volt power source. The majority of the code is really executed inside the loop() method. The analog value is read from pin A2, which is where the potentiometer's wiper is connected. The analogRead() function returns a value between 0 and 1023 that represents the voltage level read from the potentiometer. The map() method is then used to translate the potentiometer data into the appropriate motor speed. A potentiometer value, which ranges from 0 to 1023, is changed into a motor speed range, which ranges from 255 to 0. In other words, when the potentiometer reading is zero, the motor speed will be set to its maximum (255), and when it is 1023, it will be set to its minimum ((0)). Pin 3 is output with the mapped motor speed using the analogWrite() technique to control the speed of the motor driver. The delay(1) function adds a quick 1-millisecond delay before the following iteration of the loop to give the motor some time to stabilize.</p>
+        <p class="u-custom-font u-font-pt-sans u-text u-text-6">
+          <span style="font-weight: normal;">Schematic:</span>
+        </p>
+        <img class="u-image u-image-contain u-image-default u-image-2" src="images/ArduinoProgram.png" alt="" data-image-width="2092" data-image-height="1398">
       </div>
-  
+
 </body></html>
