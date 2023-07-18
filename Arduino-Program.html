@@ -65,6 +65,39 @@
         <p class="u-custom-font u-font-pt-sans u-text u-text-4">
           <span style="font-weight: normal;">Code:</span>
         </p>
+        <style>
+          code {
+            font-family: Consolas,"courier new";
+            color: crimson;
+            background-color: #f1f1f1;
+            padding: 2px;
+            font-size: 105%;
+          }
+          </style>
+          </head>
+          <body>
+          
+          <h1>The code element + CSS</h1>
+          
+          <p> <code>
+            void setup() {
+              pinMode(3, OUTPUT);
+              pinMode(A0, OUTPUT);  //This will be GND for the potentiometer
+              pinMode(A4, OUTPUT);  //This will be 3.3V for the pot
+            
+              digitalWrite(A0, LOW);
+              digitalWrite(A4, HIGH);
+            }
+            
+            void loop() {
+              int pot_value = analogRead(A2);   //pot wiper is on A2
+              int motor_speed = map(pot_value, 0, 1023, 255, 0); // map motor_level to pot_value so that zero corresponds to lowest speed
+              analogWrite(3, motor_speed);
+              delay(1);
+            }
+          </code></p>
+          
+          </body>
         <p class="u-text u-text-5"> The setup() method defines pin modes. Pin 3 is set up to control the motor speed as an output pin. Additionally set are the output pins A0 and A4. A0 is tied to the potentiometer's ground (GND) in this configuration, while A4 is attached to the device's 3.3-volt power source. The majority of the code is really executed inside the loop() method. The analog value is read from pin A2, which is where the potentiometer's wiper is connected. The analogRead() function returns a value between 0 and 1023 that represents the voltage level read from the potentiometer. The map() method is then used to translate the potentiometer data into the appropriate motor speed. A potentiometer value, which ranges from 0 to 1023, is changed into a motor speed range, which ranges from 255 to 0. In other words, when the potentiometer reading is zero, the motor speed will be set to its maximum (255), and when it is 1023, it will be set to its minimum ((0)). Pin 3 is output with the mapped motor speed using the analogWrite() technique to control the speed of the motor driver. The delay(1) function adds a quick 1-millisecond delay before the following iteration of the loop to give the motor some time to stabilize.</p>
         <p class="u-custom-font u-font-pt-sans u-text u-text-6">
           <span style="font-weight: normal;">Schematic:</span>
