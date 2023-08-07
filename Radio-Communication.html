@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Radio Communication</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="Radio-Communication.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.13.1, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Radio Communication">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-palette-1-dark-2 u-header" id="sec-9da5"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-custom-font u-font-pt-sans u-text u-text-default u-text-1">PHYS-S12 <span style="font-weight: 700;">Intro to Digital Fabrication</span>&nbsp;
+        </p>
+        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html" style="padding: 10px 12px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About1.html" style="padding: 10px 12px;">About</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="About1.html">About</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-clearfix u-palette-1-dark-2 u-section-1" id="sec-8f83">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-custom-font u-font-pt-sans u-text u-text-1">Radio Communication</p>
+        <p class="u-custom-font u-font-pt-sans u-text u-text-2">
+          <span style="font-weight: normal;">Overview:&nbsp;</span>
+        </p>
+        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1" src="images/joy-it-nodemcu-esp32-development-board.png" alt="" data-image-width="1000" data-image-height="1000">
+        <p class="u-custom-font u-font-pt-sans u-text u-text-3">For this project I worked with Tiger Strake to be able to have our ESPs communicate. We wanted the ESPs to count, for example one serial monitor would show odd numbers while couting up, and the other serial monitor would show even numbers while counting up.&nbsp;</p>
+        <p class="u-custom-font u-font-pt-sans u-text u-text-4">
+          <span style="font-weight: normal;">Process:</span>
+        </p>
+        <p class="u-custom-font u-font-pt-sans u-text u-text-5">We connected the ESPs to our computers and then we first started by getting the MAC addresses for our ESPs. We had a small problem where our buad rate was wrong and we would get weird symbols but in the end we figured it out.&nbsp;</p>
+        <img class="u-image u-image-default u-image-2" src="images/Screenshot2023-08-05at07.37.08.jpeg" alt="" data-image-width="3456" data-image-height="2234">
+        <p class="u-custom-font u-font-pt-sans u-text u-text-6"> The #include "WiFi.h" directive at the beginning of the sketch includes the necessary library to enable Wi-Fi capabilities. The void setup() function is where the initial setup of the program occurs. It starts by initiating the serial communication at a baud rate of 115200 using Serial.begin(115200). The WiFi.mode(WIFI_MODE_STA) statement sets the Wi-Fi mode to Station mode. This means the device will connect to an existing Wi-Fi network as a client rather than acting as an access point. The line Serial.println(WiFi.macAddress()) prints the MAC address of the device to the serial monitor. The MAC address is a unique identifier assigned to network interfaces, including Wi-Fi interfaces. The void loop() function contains a single statement: Serial.println(WiFi.macAddress()). This continuously prints the MAC address to the serial monitor in an infinite loop, allowing you to observe the MAC address while the program is running.</p>
+        <pre><code>
+          #include "WiFi.h"
+
+          void setup(){
+            Serial.begin(115200);
+            WiFi.mode(WIFI_MODE_STA);
+            Serial.println(WiFi.macAddress());
+          }
+          
+          void loop(){
+            Serial.println(WiFi.macAddress());
+          }
+        </code>
+        </pre>
+        <p class="u-custom-font u-font-pt-sans u-text u-text-7">Next we uploaded the code shown below with the respective MAC addresses.&nbsp;</p>
+        <p class="u-custom-font u-font-pt-sans u-text u-text-8"> Code Snippet 1:<br>
+          <pre><code>
+            #include <esp_now.h>
+              #include <WiFi.h>
+              
+              
+              // REPLACE WITH THE MAC Address of your receiver.  Code is the same for both boards, with the exception of the following line.
+              uint8_t broadcastAddress[] =  {0x94, 0xB5, 0x55, 0x23, 0xF6, 0xD0};   // this is board no 1.
+              //uint8_t broadcastAddress[] =  {0x24, 0x62, 0xAB, 0xB0, 0x34, 0x8C};  this is board no 2
+              
+              // Variable to store if sending data was successful
+              String success;
+              
+              byte incomingByte;
+              byte outgoingByte;
+              
+              
+              // Callback when data is sent
+              void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
+                Serial.print("\r\nLast Packet Send Status:\t");
+                Serial.println(status == ESP_NOW_SEND_SUCCESS ? "Delivery Success" : "Delivery Fail");
+                if (status ==0){
+                  success = "Delivery Success :)";
+                }
+                else{
+                  success = "Delivery Fail :(";
+                }
+              }
+              
+              // Callback when data is received
+              void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) {
+                memcpy(&incomingByte, incomingData, sizeof(incomingByte));
+                Serial.print("Bytes received: ");
+                Serial.println(len);
+              }
+              
+              void setup() {
+                // Init Serial Monitor
+                Serial.begin(115200);
+              
+              
+                // Set device as a Wi-Fi Station
+                WiFi.mode(WIFI_STA);
+              
+                // Init ESP-NOW
+                if (esp_now_init() != ESP_OK) {
+                  Serial.println("Error initializing ESP-NOW");
+                  return;
+                }
+              
+                // Register for a callback function that will be called when data is received
+                esp_now_register_send_cb(OnDataSent);
+              
+                // Register peer
+                esp_now_peer_info_t peerInfo;
+                memset(&peerInfo, 0, sizeof(peerInfo));
+                memcpy(peerInfo.peer_addr, broadcastAddress, 6);
+                peerInfo.channel = 0;  
+                peerInfo.encrypt = false;
+              
+                // Add peer        
+                if (esp_now_add_peer(&peerInfo) != ESP_OK){
+                  Serial.println("Failed to add peer");
+                  return;
+                }
+                // Register for a callback function that will be called when data is received
+                esp_now_register_recv_cb(OnDataRecv);
+              }
+              bool isPrime(int num) {
+                if(num < 2) 
+                  return false;
+                for(int i = 2; i <= sqrt(num); i++) {
+                  if(num % i == 0)
+                    return false;
+                }
+                return true;
+              }
+              
+              void loop() {
+                if(Serial.available() > 0) {
+                  int incomingByte = Serial.read();
+                  Serial.println(incomingByte);
+                  int outgoingByte = incomingByte;
+                  do {
+                    outgoingByte++;
+                  } while(!isPrime(outgoingByte));
+                  Serial.println(outgoingByte);
+                }
+              }
+              
+                // Send message via ESP-NOW
+                esp_err_t result = esp_now_send(broadcastAddress, (uint8_t *) &outgoingByte, sizeof(outgoingByte));
+              
+                if (result == ESP_OK) {
+                  Serial.println("Sent with success");
+                }
+                else {
+                  Serial.println("Error sending the data");
+                }
+              
+               delay(1000);
+              
+              }
+          </code>
+          </pre> 
+          <br>This code snippet defines the behavior for one of the ESP32 devices. #include directives include the necessary libraries, specifically esp_now.h for ESP-NOW communication and WiFi.h for Wi-Fi functionality. The broadcastAddress array contains the MAC address of the receiving ESP32 (the other device in the communication). The OnDataSent function is a callback triggered when data is successfully sent using ESP-NOW. It prints the status of the data transmission. The OnDataRecv function is a callback executed when data is received from the other ESP32. It extracts the received data and prints the number of bytes received. In the setup() function: Serial communication is initiated. The Wi-Fi mode is set to Wi-Fi Station mode (WIFI_STA). Callback functions are registered for data transmission and reception. A peer (receiver) is registered for communication, including its MAC address and communication parameters. In the loop() function:If there is data available from the serial monitor, an incoming byte is read and processed. The incoming byte is incremented until the next odd number is reached. The outgoing byte is then sent to the other ESP32 using ESP-NOW.<br>
+          <br>Code Snippet 2:<br>
+          <pre><code>
+            #include <esp_now.h>
+              #include <WiFi.h>
+              
+              
+              // REPLACE WITH THE MAC Address of your receiver.  Code is the same for both boards, with the exception of the following line.
+              uint8_t broadcastAddress[] =  {0xC8, 0xF0, 0x9E, 0xB5, 0x0B, 0x9C};   // this is board no 1.
+              //uint8_t broadcastAddress[] =  {0x24, 0x62, 0xAB, 0xB0, 0x34, 0x8C};  this is board no 2
+              
+              // Variable to store if sending data was successful
+              String success;
+              
+              byte incomingByte;
+              byte outgoingByte;
+              
+              
+              // Callback when data is sent
+              void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
+                Serial.print("\r\nLast Packet Send Status:\t");
+                Serial.println(status == ESP_NOW_SEND_SUCCESS ? "Delivery Success" : "Delivery Fail");
+                if (status ==0){
+                  success = "Delivery Success :)";
+                }
+                else{
+                  success = "Delivery Fail :(";
+                }
+              }
+              
+              // Callback when data is received
+              void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) {
+                memcpy(&incomingByte, incomingData, sizeof(incomingByte));
+                Serial.print("Bytes received: ");
+                Serial.println(len);
+              }
+              
+              void setup() {
+                // Init Serial Monitor
+                Serial.begin(115200);
+              
+              
+                // Set device as a Wi-Fi Station
+                WiFi.mode(WIFI_STA);
+              
+                // Init ESP-NOW
+                if (esp_now_init() != ESP_OK) {
+                  Serial.println("Error initializing ESP-NOW");
+                  return;
+                }
+              
+                // Register for a callback function that will be called when data is received
+                esp_now_register_send_cb(OnDataSent);
+              
+                // Register peer
+                esp_now_peer_info_t peerInfo;
+                memset(&peerInfo, 0, sizeof(peerInfo));
+                memcpy(peerInfo.peer_addr, broadcastAddress, 6);
+                peerInfo.channel = 0;  
+                peerInfo.encrypt = false;
+              
+                // Add peer        
+                if (esp_now_add_peer(&peerInfo) != ESP_OK){
+                  Serial.println("Failed to add peer");
+                  return;
+                }
+                // Register for a callback function that will be called when data is received
+                esp_now_register_recv_cb(OnDataRecv);
+              }
+              
+              void loop() {
+                Serial.println("Wireless communication using ESP32s");
+                //outgoingByte = incomingByte+1;
+              
+                // Send message via ESP-NOW
+                esp_err_t result = esp_now_send(broadcastAddress, (uint8_t *) &outgoingByte, sizeof(outgoingByte));
+              
+                if (result == ESP_OK) {
+                  Serial.println("Sent with success");
+                }
+                else {
+                  Serial.println("Error sending the data");
+                }
+              
+               delay(1000);
+              
+              }
+          </code>
+          </pre>
+          <br>This code snippet is intended for the other ESP32 device in the communication.Similar to the first snippet, it includes the necessary libraries and defines the broadcastAddress. The OnDataSent and OnDataRecv functions have the same functionality as in the first snippet. The setup() function follows a similar pattern, initializing serial communication, Wi-Fi mode, and ESP-NOW. It also registers the same callback functions and sets up the peer information. The loop() function is simpler. It repeatedly sends a message containing "Wireless communication using ESP32s" to the other ESP32 device.
+        </p>
+        <p class="u-custom-font u-font-pt-sans u-text u-text-9">
+          <span style="font-weight: normal;">Final Product</span>
+        </p>
+        <img class="u-image u-image-default u-image-3" src="images/Screenshot2023-08-07at5.51.00AM.png" alt="" data-image-width="2374" data-image-height="1460">
+        <img class="u-image u-image-default u-image-4" src="images/Screenshot2023-08-07at5.51.11AM.png" alt="" data-image-width="2386" data-image-height="1460">
+        <video width="600" height="" controls>
+          <source src="IMG_4572.mp4" type=video/mp4>
+        </video>
+ 
+ 
+      </div>
+  
+</body></html>
